@@ -1,5 +1,5 @@
 # Fuck you, Jetbrains
-.idea
+.idea/
 
 
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, 
@@ -49,6 +49,7 @@ fabric.properties
 
 CMakeCache.txt
 CMakeFiles
+CMakeFiles/
 CMakeScripts
 Testing
 Makefile
