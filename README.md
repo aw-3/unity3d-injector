@@ -14,7 +14,7 @@ Unity3d-inject is a Mono C# assembly injector designed for use on Unity3D games 
 
 #### Linux
 
-```
+```bash
 git clone --recursive https://github.com/aw-3/unity3d-injector.git
 cd unity3d-injector-master
 cmake .
