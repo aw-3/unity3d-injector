@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/unity3d_inject.dir/main.cpp.o"
-  "CMakeFiles/unity3d_inject.dir/utility.cpp.o"
-  "CMakeFiles/unity3d_inject.dir/mono.cpp.o"
+  "CMakeFiles/unity3d_inject.dir/src/main.cpp.o"
+  "CMakeFiles/unity3d_inject.dir/src/utility.cpp.o"
+  "CMakeFiles/unity3d_inject.dir/src/mono.cpp.o"
   "libunity3d_inject.pdb"
   "libunity3d_inject.so"
 )

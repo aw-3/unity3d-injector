@@ -270,16 +270,25 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/nicholas/CLionProjects/unity3d-inject/main.cpp">
+		<Unit filename="/home/nicholas/CLionProjects/unity3d-inject/src/main.cpp">
 			<Option target="unity3d_inject"/>
 		</Unit>
-		<Unit filename="/home/nicholas/CLionProjects/unity3d-inject/main.h">
+		<Unit filename="/home/nicholas/CLionProjects/unity3d-inject/src/main.h">
 			<Option target="unity3d_inject"/>
 		</Unit>
-		<Unit filename="/home/nicholas/CLionProjects/unity3d-inject/mono.cpp">
+		<Unit filename="/home/nicholas/CLionProjects/unity3d-inject/src/mono.cpp">
 			<Option target="unity3d_inject"/>
 		</Unit>
-		<Unit filename="/home/nicholas/CLionProjects/unity3d-inject/mono.h">
+		<Unit filename="/home/nicholas/CLionProjects/unity3d-inject/src/mono.h">
+			<Option target="unity3d_inject"/>
+		</Unit>
+		<Unit filename="/home/nicholas/CLionProjects/unity3d-inject/src/types.h">
+			<Option target="unity3d_inject"/>
+		</Unit>
+		<Unit filename="/home/nicholas/CLionProjects/unity3d-inject/src/utility.cpp">
+			<Option target="unity3d_inject"/>
+		</Unit>
+		<Unit filename="/home/nicholas/CLionProjects/unity3d-inject/src/utility.h">
 			<Option target="unity3d_inject"/>
 		</Unit>
 		<Unit filename="/home/nicholas/CLionProjects/unity3d-inject/subhook/subhook.c">
@@ -293,15 +302,6 @@
 		</Unit>
 		<Unit filename="/home/nicholas/CLionProjects/unity3d-inject/subhook/test/test.cpp">
 			<Option target="test_program"/>
-		</Unit>
-		<Unit filename="/home/nicholas/CLionProjects/unity3d-inject/types.h">
-			<Option target="unity3d_inject"/>
-		</Unit>
-		<Unit filename="/home/nicholas/CLionProjects/unity3d-inject/utility.cpp">
-			<Option target="unity3d_inject"/>
-		</Unit>
-		<Unit filename="/home/nicholas/CLionProjects/unity3d-inject/utility.h">
-			<Option target="unity3d_inject"/>
 		</Unit>
 		<Unit filename="/home/nicholas/CLionProjects/unity3d-inject/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

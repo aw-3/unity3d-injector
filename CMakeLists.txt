@@ -3,7 +3,7 @@ project(unity3d_inject)
 
 set(CMAKE_CXX_STANDARD 14)
 
-set(SOURCE_FILES types.h main.cpp main.h utility.cpp utility.h mono.cpp mono.h)
+set(SOURCE_FILES src/types.h src/main.cpp src/main.h src/utility.cpp src/utility.h src/mono.cpp src/mono.h)
 
 add_subdirectory(subhook)
 

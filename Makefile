@@ -579,86 +579,86 @@ test_program/fast:
 	$(MAKE) -f subhook/test/CMakeFiles/test_program.dir/build.make subhook/test/CMakeFiles/test_program.dir/build
 .PHONY : test_program/fast
 
-main.o: main.cpp.o
+src/main.o: src/main.cpp.o
 
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-mono.o: mono.cpp.o
-
-.PHONY : mono.o
+.PHONY : src/main.o
 
 # target to build an object file
-mono.cpp.o:
-	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/mono.cpp.o
-.PHONY : mono.cpp.o
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-mono.i: mono.cpp.i
+src/main.i: src/main.cpp.i
 
-.PHONY : mono.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-mono.cpp.i:
-	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/mono.cpp.i
-.PHONY : mono.cpp.i
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-mono.s: mono.cpp.s
+src/main.s: src/main.cpp.s
 
-.PHONY : mono.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-mono.cpp.s:
-	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/mono.cpp.s
-.PHONY : mono.cpp.s
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
-utility.o: utility.cpp.o
+src/mono.o: src/mono.cpp.o
 
-.PHONY : utility.o
+.PHONY : src/mono.o
 
 # target to build an object file
-utility.cpp.o:
-	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/utility.cpp.o
-.PHONY : utility.cpp.o
+src/mono.cpp.o:
+	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/src/mono.cpp.o
+.PHONY : src/mono.cpp.o
 
-utility.i: utility.cpp.i
+src/mono.i: src/mono.cpp.i
 
-.PHONY : utility.i
+.PHONY : src/mono.i
 
 # target to preprocess a source file
-utility.cpp.i:
-	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/utility.cpp.i
-.PHONY : utility.cpp.i
+src/mono.cpp.i:
+	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/src/mono.cpp.i
+.PHONY : src/mono.cpp.i
 
-utility.s: utility.cpp.s
+src/mono.s: src/mono.cpp.s
 
-.PHONY : utility.s
+.PHONY : src/mono.s
 
 # target to generate assembly for a file
-utility.cpp.s:
-	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/utility.cpp.s
-.PHONY : utility.cpp.s
+src/mono.cpp.s:
+	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/src/mono.cpp.s
+.PHONY : src/mono.cpp.s
+
+src/utility.o: src/utility.cpp.o
+
+.PHONY : src/utility.o
+
+# target to build an object file
+src/utility.cpp.o:
+	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/src/utility.cpp.o
+.PHONY : src/utility.cpp.o
+
+src/utility.i: src/utility.cpp.i
+
+.PHONY : src/utility.i
+
+# target to preprocess a source file
+src/utility.cpp.i:
+	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/src/utility.cpp.i
+.PHONY : src/utility.cpp.i
+
+src/utility.s: src/utility.cpp.s
+
+.PHONY : src/utility.s
+
+# target to generate assembly for a file
+src/utility.cpp.s:
+	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/src/utility.cpp.s
+.PHONY : src/utility.cpp.s
 
 # Help Target
 help:
@@ -705,15 +705,15 @@ help:
 	@echo "... ExperimentalSubmit"
 	@echo "... ContinuousStart"
 	@echo "... test_program"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... mono.o"
-	@echo "... mono.i"
-	@echo "... mono.s"
-	@echo "... utility.o"
-	@echo "... utility.i"
-	@echo "... utility.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/mono.o"
+	@echo "... src/mono.i"
+	@echo "... src/mono.s"
+	@echo "... src/utility.o"
+	@echo "... src/utility.i"
+	@echo "... src/utility.s"
 .PHONY : help
 
 

@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/nicholas/CLionProjects/unity3d-inject/main.cpp" "/home/nicholas/CLionProjects/unity3d-inject/CMakeFiles/unity3d_inject.dir/main.cpp.o"
-  "/home/nicholas/CLionProjects/unity3d-inject/mono.cpp" "/home/nicholas/CLionProjects/unity3d-inject/CMakeFiles/unity3d_inject.dir/mono.cpp.o"
-  "/home/nicholas/CLionProjects/unity3d-inject/utility.cpp" "/home/nicholas/CLionProjects/unity3d-inject/CMakeFiles/unity3d_inject.dir/utility.cpp.o"
+  "/home/nicholas/CLionProjects/unity3d-inject/src/main.cpp" "/home/nicholas/CLionProjects/unity3d-inject/CMakeFiles/unity3d_inject.dir/src/main.cpp.o"
+  "/home/nicholas/CLionProjects/unity3d-inject/src/mono.cpp" "/home/nicholas/CLionProjects/unity3d-inject/CMakeFiles/unity3d_inject.dir/src/mono.cpp.o"
+  "/home/nicholas/CLionProjects/unity3d-inject/src/utility.cpp" "/home/nicholas/CLionProjects/unity3d-inject/CMakeFiles/unity3d_inject.dir/src/utility.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

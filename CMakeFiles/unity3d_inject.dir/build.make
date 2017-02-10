@@ -57,90 +57,90 @@ include CMakeFiles/unity3d_inject.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/unity3d_inject.dir/flags.make
 
-CMakeFiles/unity3d_inject.dir/main.cpp.o: CMakeFiles/unity3d_inject.dir/flags.make
-CMakeFiles/unity3d_inject.dir/main.cpp.o: main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/CLionProjects/unity3d-inject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/unity3d_inject.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unity3d_inject.dir/main.cpp.o -c /home/nicholas/CLionProjects/unity3d-inject/main.cpp
+CMakeFiles/unity3d_inject.dir/src/main.cpp.o: CMakeFiles/unity3d_inject.dir/flags.make
+CMakeFiles/unity3d_inject.dir/src/main.cpp.o: src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/CLionProjects/unity3d-inject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/unity3d_inject.dir/src/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unity3d_inject.dir/src/main.cpp.o -c /home/nicholas/CLionProjects/unity3d-inject/src/main.cpp
 
-CMakeFiles/unity3d_inject.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unity3d_inject.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/CLionProjects/unity3d-inject/main.cpp > CMakeFiles/unity3d_inject.dir/main.cpp.i
+CMakeFiles/unity3d_inject.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unity3d_inject.dir/src/main.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/CLionProjects/unity3d-inject/src/main.cpp > CMakeFiles/unity3d_inject.dir/src/main.cpp.i
 
-CMakeFiles/unity3d_inject.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unity3d_inject.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/CLionProjects/unity3d-inject/main.cpp -o CMakeFiles/unity3d_inject.dir/main.cpp.s
+CMakeFiles/unity3d_inject.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unity3d_inject.dir/src/main.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/CLionProjects/unity3d-inject/src/main.cpp -o CMakeFiles/unity3d_inject.dir/src/main.cpp.s
 
-CMakeFiles/unity3d_inject.dir/main.cpp.o.requires:
+CMakeFiles/unity3d_inject.dir/src/main.cpp.o.requires:
 
-.PHONY : CMakeFiles/unity3d_inject.dir/main.cpp.o.requires
+.PHONY : CMakeFiles/unity3d_inject.dir/src/main.cpp.o.requires
 
-CMakeFiles/unity3d_inject.dir/main.cpp.o.provides: CMakeFiles/unity3d_inject.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/unity3d_inject.dir/main.cpp.o.provides
+CMakeFiles/unity3d_inject.dir/src/main.cpp.o.provides: CMakeFiles/unity3d_inject.dir/src/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/src/main.cpp.o.provides.build
+.PHONY : CMakeFiles/unity3d_inject.dir/src/main.cpp.o.provides
 
-CMakeFiles/unity3d_inject.dir/main.cpp.o.provides.build: CMakeFiles/unity3d_inject.dir/main.cpp.o
-
-
-CMakeFiles/unity3d_inject.dir/utility.cpp.o: CMakeFiles/unity3d_inject.dir/flags.make
-CMakeFiles/unity3d_inject.dir/utility.cpp.o: utility.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/CLionProjects/unity3d-inject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/unity3d_inject.dir/utility.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unity3d_inject.dir/utility.cpp.o -c /home/nicholas/CLionProjects/unity3d-inject/utility.cpp
-
-CMakeFiles/unity3d_inject.dir/utility.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unity3d_inject.dir/utility.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/CLionProjects/unity3d-inject/utility.cpp > CMakeFiles/unity3d_inject.dir/utility.cpp.i
-
-CMakeFiles/unity3d_inject.dir/utility.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unity3d_inject.dir/utility.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/CLionProjects/unity3d-inject/utility.cpp -o CMakeFiles/unity3d_inject.dir/utility.cpp.s
-
-CMakeFiles/unity3d_inject.dir/utility.cpp.o.requires:
-
-.PHONY : CMakeFiles/unity3d_inject.dir/utility.cpp.o.requires
-
-CMakeFiles/unity3d_inject.dir/utility.cpp.o.provides: CMakeFiles/unity3d_inject.dir/utility.cpp.o.requires
-	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/utility.cpp.o.provides.build
-.PHONY : CMakeFiles/unity3d_inject.dir/utility.cpp.o.provides
-
-CMakeFiles/unity3d_inject.dir/utility.cpp.o.provides.build: CMakeFiles/unity3d_inject.dir/utility.cpp.o
+CMakeFiles/unity3d_inject.dir/src/main.cpp.o.provides.build: CMakeFiles/unity3d_inject.dir/src/main.cpp.o
 
 
-CMakeFiles/unity3d_inject.dir/mono.cpp.o: CMakeFiles/unity3d_inject.dir/flags.make
-CMakeFiles/unity3d_inject.dir/mono.cpp.o: mono.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/CLionProjects/unity3d-inject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/unity3d_inject.dir/mono.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unity3d_inject.dir/mono.cpp.o -c /home/nicholas/CLionProjects/unity3d-inject/mono.cpp
+CMakeFiles/unity3d_inject.dir/src/utility.cpp.o: CMakeFiles/unity3d_inject.dir/flags.make
+CMakeFiles/unity3d_inject.dir/src/utility.cpp.o: src/utility.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/CLionProjects/unity3d-inject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/unity3d_inject.dir/src/utility.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unity3d_inject.dir/src/utility.cpp.o -c /home/nicholas/CLionProjects/unity3d-inject/src/utility.cpp
 
-CMakeFiles/unity3d_inject.dir/mono.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unity3d_inject.dir/mono.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/CLionProjects/unity3d-inject/mono.cpp > CMakeFiles/unity3d_inject.dir/mono.cpp.i
+CMakeFiles/unity3d_inject.dir/src/utility.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unity3d_inject.dir/src/utility.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/CLionProjects/unity3d-inject/src/utility.cpp > CMakeFiles/unity3d_inject.dir/src/utility.cpp.i
 
-CMakeFiles/unity3d_inject.dir/mono.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unity3d_inject.dir/mono.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/CLionProjects/unity3d-inject/mono.cpp -o CMakeFiles/unity3d_inject.dir/mono.cpp.s
+CMakeFiles/unity3d_inject.dir/src/utility.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unity3d_inject.dir/src/utility.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/CLionProjects/unity3d-inject/src/utility.cpp -o CMakeFiles/unity3d_inject.dir/src/utility.cpp.s
 
-CMakeFiles/unity3d_inject.dir/mono.cpp.o.requires:
+CMakeFiles/unity3d_inject.dir/src/utility.cpp.o.requires:
 
-.PHONY : CMakeFiles/unity3d_inject.dir/mono.cpp.o.requires
+.PHONY : CMakeFiles/unity3d_inject.dir/src/utility.cpp.o.requires
 
-CMakeFiles/unity3d_inject.dir/mono.cpp.o.provides: CMakeFiles/unity3d_inject.dir/mono.cpp.o.requires
-	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/mono.cpp.o.provides.build
-.PHONY : CMakeFiles/unity3d_inject.dir/mono.cpp.o.provides
+CMakeFiles/unity3d_inject.dir/src/utility.cpp.o.provides: CMakeFiles/unity3d_inject.dir/src/utility.cpp.o.requires
+	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/src/utility.cpp.o.provides.build
+.PHONY : CMakeFiles/unity3d_inject.dir/src/utility.cpp.o.provides
 
-CMakeFiles/unity3d_inject.dir/mono.cpp.o.provides.build: CMakeFiles/unity3d_inject.dir/mono.cpp.o
+CMakeFiles/unity3d_inject.dir/src/utility.cpp.o.provides.build: CMakeFiles/unity3d_inject.dir/src/utility.cpp.o
+
+
+CMakeFiles/unity3d_inject.dir/src/mono.cpp.o: CMakeFiles/unity3d_inject.dir/flags.make
+CMakeFiles/unity3d_inject.dir/src/mono.cpp.o: src/mono.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/CLionProjects/unity3d-inject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/unity3d_inject.dir/src/mono.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unity3d_inject.dir/src/mono.cpp.o -c /home/nicholas/CLionProjects/unity3d-inject/src/mono.cpp
+
+CMakeFiles/unity3d_inject.dir/src/mono.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unity3d_inject.dir/src/mono.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/CLionProjects/unity3d-inject/src/mono.cpp > CMakeFiles/unity3d_inject.dir/src/mono.cpp.i
+
+CMakeFiles/unity3d_inject.dir/src/mono.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unity3d_inject.dir/src/mono.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/CLionProjects/unity3d-inject/src/mono.cpp -o CMakeFiles/unity3d_inject.dir/src/mono.cpp.s
+
+CMakeFiles/unity3d_inject.dir/src/mono.cpp.o.requires:
+
+.PHONY : CMakeFiles/unity3d_inject.dir/src/mono.cpp.o.requires
+
+CMakeFiles/unity3d_inject.dir/src/mono.cpp.o.provides: CMakeFiles/unity3d_inject.dir/src/mono.cpp.o.requires
+	$(MAKE) -f CMakeFiles/unity3d_inject.dir/build.make CMakeFiles/unity3d_inject.dir/src/mono.cpp.o.provides.build
+.PHONY : CMakeFiles/unity3d_inject.dir/src/mono.cpp.o.provides
+
+CMakeFiles/unity3d_inject.dir/src/mono.cpp.o.provides.build: CMakeFiles/unity3d_inject.dir/src/mono.cpp.o
 
 
 # Object files for target unity3d_inject
 unity3d_inject_OBJECTS = \
-"CMakeFiles/unity3d_inject.dir/main.cpp.o" \
-"CMakeFiles/unity3d_inject.dir/utility.cpp.o" \
-"CMakeFiles/unity3d_inject.dir/mono.cpp.o"
+"CMakeFiles/unity3d_inject.dir/src/main.cpp.o" \
+"CMakeFiles/unity3d_inject.dir/src/utility.cpp.o" \
+"CMakeFiles/unity3d_inject.dir/src/mono.cpp.o"
 
 # External object files for target unity3d_inject
 unity3d_inject_EXTERNAL_OBJECTS =
 
-libunity3d_inject.so: CMakeFiles/unity3d_inject.dir/main.cpp.o
-libunity3d_inject.so: CMakeFiles/unity3d_inject.dir/utility.cpp.o
-libunity3d_inject.so: CMakeFiles/unity3d_inject.dir/mono.cpp.o
+libunity3d_inject.so: CMakeFiles/unity3d_inject.dir/src/main.cpp.o
+libunity3d_inject.so: CMakeFiles/unity3d_inject.dir/src/utility.cpp.o
+libunity3d_inject.so: CMakeFiles/unity3d_inject.dir/src/mono.cpp.o
 libunity3d_inject.so: CMakeFiles/unity3d_inject.dir/build.make
 libunity3d_inject.so: subhook/libsubhook.so
 libunity3d_inject.so: CMakeFiles/unity3d_inject.dir/link.txt
@@ -152,9 +152,9 @@ CMakeFiles/unity3d_inject.dir/build: libunity3d_inject.so
 
 .PHONY : CMakeFiles/unity3d_inject.dir/build
 
-CMakeFiles/unity3d_inject.dir/requires: CMakeFiles/unity3d_inject.dir/main.cpp.o.requires
-CMakeFiles/unity3d_inject.dir/requires: CMakeFiles/unity3d_inject.dir/utility.cpp.o.requires
-CMakeFiles/unity3d_inject.dir/requires: CMakeFiles/unity3d_inject.dir/mono.cpp.o.requires
+CMakeFiles/unity3d_inject.dir/requires: CMakeFiles/unity3d_inject.dir/src/main.cpp.o.requires
+CMakeFiles/unity3d_inject.dir/requires: CMakeFiles/unity3d_inject.dir/src/utility.cpp.o.requires
+CMakeFiles/unity3d_inject.dir/requires: CMakeFiles/unity3d_inject.dir/src/mono.cpp.o.requires
 
 .PHONY : CMakeFiles/unity3d_inject.dir/requires
 

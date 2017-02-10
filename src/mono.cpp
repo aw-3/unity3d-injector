@@ -8,7 +8,7 @@
 #include <cstdint>
 
 #include "main.h"
-#include "subhook/subhook.h"
+#include "subhook.h"
 
 subhook::Hook g_MonoGetDomainHook;
 subhook::Hook g_MonoFieldGetValueHook;

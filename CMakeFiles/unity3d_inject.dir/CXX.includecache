@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/nicholas/CLionProjects/unity3d-inject/main.cpp
+/home/nicholas/CLionProjects/unity3d-inject/src/main.cpp
 main.h
-/home/nicholas/CLionProjects/unity3d-inject/main.h
+/home/nicholas/CLionProjects/unity3d-inject/src/main.h
 pthread.h
 -
 stdlib.h
@@ -26,37 +26,35 @@ iostream
 sstream
 -
 utility.h
-/home/nicholas/CLionProjects/unity3d-inject/utility.h
+/home/nicholas/CLionProjects/unity3d-inject/src/utility.h
 mono.h
-/home/nicholas/CLionProjects/unity3d-inject/mono.h
+/home/nicholas/CLionProjects/unity3d-inject/src/mono.h
 
-/home/nicholas/CLionProjects/unity3d-inject/main.h
+/home/nicholas/CLionProjects/unity3d-inject/src/main.h
 types.h
-/home/nicholas/CLionProjects/unity3d-inject/types.h
+/home/nicholas/CLionProjects/unity3d-inject/src/types.h
 
-/home/nicholas/CLionProjects/unity3d-inject/mono.cpp
+/home/nicholas/CLionProjects/unity3d-inject/src/mono.cpp
 mono.h
-/home/nicholas/CLionProjects/unity3d-inject/mono.h
+/home/nicholas/CLionProjects/unity3d-inject/src/mono.h
 stdlib.h
 -
 cstdint
 -
 main.h
-/home/nicholas/CLionProjects/unity3d-inject/main.h
-subhook/subhook.h
-/home/nicholas/CLionProjects/unity3d-inject/subhook/subhook.h
+/home/nicholas/CLionProjects/unity3d-inject/src/main.h
+subhook.h
+/home/nicholas/CLionProjects/unity3d-inject/src/subhook.h
 
-/home/nicholas/CLionProjects/unity3d-inject/mono.h
+/home/nicholas/CLionProjects/unity3d-inject/src/mono.h
 dlfcn.h
 -
 
-/home/nicholas/CLionProjects/unity3d-inject/subhook/subhook.h
+/home/nicholas/CLionProjects/unity3d-inject/src/types.h
 
-/home/nicholas/CLionProjects/unity3d-inject/types.h
-
-/home/nicholas/CLionProjects/unity3d-inject/utility.cpp
+/home/nicholas/CLionProjects/unity3d-inject/src/utility.cpp
 utility.h
-/home/nicholas/CLionProjects/unity3d-inject/utility.h
+/home/nicholas/CLionProjects/unity3d-inject/src/utility.h
 link.h
 -
 cstring
@@ -68,5 +66,7 @@ vector
 iostream
 -
 
-/home/nicholas/CLionProjects/unity3d-inject/utility.h
+/home/nicholas/CLionProjects/unity3d-inject/src/utility.h
+
+subhook/subhook.h
 
