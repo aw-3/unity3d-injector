@@ -1,0 +1,65 @@
+#!/bin/sh
+
+usage() { echo "Usage: $0 [[--pid <int>] [--process <string>]] [--namespace AssemblyNamespace] mono-assembly-dll" 1>&2; exit 1; }
+
+procid="0"
+nsid="0"
+
+# Parse long args
+for arg in "$@"; do
+  shift
+  case "$arg" in
+    "--pid") set -- "$@" "-i" ;;
+    "--process") set -- "$@" "-p" ;;
+    "--namespace")   set -- "$@" "-n" ;;
+    *)        set -- "$@" "$arg"
+  esac
+done
+
+while getopts ":i:p:n:" opt; do
+    case "$opt" in
+        i)
+            pid=${OPTARG};
+            procid="1";
+            ;;
+        p)
+            pid=$(pidof ${OPTARG});
+            procid="1";
+            ;;
+        n)
+            NAMESPACE=${OPTARG};
+            nsid="1";
+            ;;
+        *)
+            usage;
+            ;;
+    esac
+done
+shift $(($OPTIND-1))
+
+if [ "$procid" -eq "0" ]; then
+    echo "Missing PID parameter";
+    usage;
+fi
+
+if [ "$nsid" -eq "0" ]; then
+    echo "Missing namespace parameter";
+    usage;
+fi
+
+FILE="$1"
+NAMESPACE="SimpleMessageBox"
+
+FILE="/home/nicholas/RiderProjects/SimpleMessageBox/SimpleMessageBox/bin/Debug/SimpleMessageBox.dll"
+
+echo "Injecting assembly $FILE into PID $pid";
+
+sudo gdb -n -q -batch \
+  -ex "attach $pid" \
+  -ex "set \$dlopen = (void*(*)(char*, int))dlopen" \
+  -ex "set \$dlerror = (char*(*)(void))dlerror" \
+  -ex "set \$hndl = \$dlopen(\"$(pwd)/libunity3d_inject.so\", 1)" \
+  -ex "call LoadMonoDll(\"$FILE\", \"$NAMESPACE\")" \
+  -ex "print \$dlerror()" \
+  -ex "detach" \
+  -ex "quit"

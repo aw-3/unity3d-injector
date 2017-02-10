@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -g  -shared -Wl,-soname,libunity3d_inject.so -o libunity3d_inject.so CMakeFiles/unity3d_inject.dir/main.cpp.o CMakeFiles/unity3d_inject.dir/utility.cpp.o CMakeFiles/unity3d_inject.dir/mono.cpp.o subhook/libsubhook.so -Wl,-rpath,/home/nicholas/CLionProjects/unity3d-inject/subhook 
