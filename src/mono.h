@@ -5,8 +5,6 @@
 #ifndef UNITY3D_INJECT_MONO_H
 #define UNITY3D_INJECT_MONO_H
 
-#include <dlfcn.h>
-
 class mono {
 public:
     typedef void* (*fmono_domain_get)();

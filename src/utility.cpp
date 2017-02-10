@@ -10,8 +10,6 @@
 #include <string>
 #include <vector>
 
-#include <iostream>
-
 void* utility::GetModuleHandle(const char *moduleName)
 {
     std::vector<const char*> modules;

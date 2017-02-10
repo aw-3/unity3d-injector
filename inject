@@ -48,9 +48,6 @@ if [ "$nsid" -eq "0" ]; then
 fi
 
 FILE="$1"
-NAMESPACE="SimpleMessageBox"
-
-FILE="/home/nicholas/RiderProjects/SimpleMessageBox/SimpleMessageBox/bin/Debug/SimpleMessageBox.dll"
 
 echo "Injecting assembly $FILE into PID $pid";
 

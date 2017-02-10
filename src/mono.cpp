@@ -4,11 +4,13 @@
 
 #include "mono.h"
 
-#include <stdlib.h>
-#include <cstdint>
-
 #include "main.h"
 #include "subhook.h"
+
+#include <stdlib.h>
+#include <dlfcn.h>
+
+#include <cstdint>
 
 subhook::Hook g_MonoGetDomainHook;
 subhook::Hook g_MonoFieldGetValueHook;
@@ -144,7 +146,7 @@ void mono::LoadAssemblyInternal()
 
 void mono::HookAndLoadAssembly()
 {
-    // Both are single use and will be removed automatically
+    // Both hooks are single use and will be removed automatically
 
     g_MonoFieldGetValueHook.Install((void*)do_field_get_value, (void*)my_mono_field_get_value, subhook::HookOption64BitOffset);
     g_MonoGetDomainHook.Install((void*)do_domain_get, (void*)my_mono_get_domain, subhook::HookOption64BitOffset);
