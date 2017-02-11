@@ -6,7 +6,7 @@
 #include <pthread.h>
 
 __attribute__((constructor))
-void HelloWorld()
+void Entrypoint()
 {
     void *libMono = utility::GetModuleHandle("libmono.so");
 
@@ -25,6 +25,7 @@ void* LoadMonoDllThread(void *args)
     mono::HookAndLoadAssembly();
 }
 
+// Called by GDB with assembly params
 extern "C" {
 void LoadMonoDll(char *dllPath, char *ns) {
     mono::assemblyToLoad = dllPath;

@@ -18,13 +18,13 @@ subhook::Hook g_MonoFieldGetValueHook;
 char *mono::assemblyToLoad = NULL;
 char *mono::assemblyNamespace = NULL;
 
-mono::fmono_domain_get                 do_domain_get = 0;
-mono::fmono_domain_assembly_open       do_domain_assembly_open;
-mono::fmono_assembly_get_image         do_assembly_get_image;
-mono::fmono_class_from_name            do_class_from_name;
-mono::fmono_class_get_method_from_name do_class_get_method_from_name;
-mono::fmono_field_get_value            do_field_get_value;
-mono::fmono_runtime_invoke             do_runtime_invoke;
+mono::fMonoDomainGet              do_domain_get;
+mono::fMonoDomainAssemblyOpen     do_domain_assembly_open;
+mono::fMonoAssemblyGetImage       do_assembly_get_image;
+mono::fMonoClassFromName          do_class_from_name;
+mono::fMonoClassGetMethodFromName do_class_get_method_from_name;
+mono::fMonoFieldGetValue          do_field_get_value;
+mono::fMonoRuntimeInvoke          do_runtime_invoke;
 
 // Definitions taken from Mono git
 
@@ -106,13 +106,13 @@ void my_mono_field_get_value(void* obj, void* classField, void* value)
 
 bool mono::Initialize(void *library)
 {
-    do_domain_get                 = (fmono_domain_get)dlsym(library, "mono_domain_get");
-    do_domain_assembly_open       = (fmono_domain_assembly_open)dlsym(library, "mono_domain_assembly_open");
-    do_assembly_get_image         = (fmono_assembly_get_image)dlsym(library, "mono_assembly_get_image");
-    do_class_from_name            = (fmono_class_from_name)dlsym(library, "mono_class_from_name");
-    do_class_get_method_from_name = (fmono_class_get_method_from_name)dlsym(library, "mono_class_get_method_from_name");
-    do_field_get_value            = (fmono_field_get_value)dlsym(library, "mono_field_get_value");
-    do_runtime_invoke             = (fmono_runtime_invoke)dlsym(library, "mono_runtime_invoke");
+    do_domain_get                 = (fMonoDomainGet)dlsym(library, "mono_domain_get");
+    do_domain_assembly_open       = (fMonoDomainAssemblyOpen)dlsym(library, "mono_domain_assembly_open");
+    do_assembly_get_image         = (fMonoAssemblyGetImage)dlsym(library, "mono_assembly_get_image");
+    do_class_from_name            = (fMonoClassFromName)dlsym(library, "mono_class_from_name");
+    do_class_get_method_from_name = (fMonoClassGetMethodFromName)dlsym(library, "mono_class_get_method_from_name");
+    do_field_get_value            = (fMonoFieldGetValue)dlsym(library, "mono_field_get_value");
+    do_runtime_invoke             = (fMonoRuntimeInvoke)dlsym(library, "mono_runtime_invoke");
 
     return true;
 };
