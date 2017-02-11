@@ -18,13 +18,13 @@ subhook::Hook g_MonoFieldGetValueHook;
 char *mono::assemblyToLoad = NULL;
 char *mono::assemblyNamespace = NULL;
 
-mono::fMonoDomainGet              do_domain_get;
-mono::fMonoDomainAssemblyOpen     do_domain_assembly_open;
-mono::fMonoAssemblyGetImage       do_assembly_get_image;
-mono::fMonoClassFromName          do_class_from_name;
-mono::fMonoClassGetMethodFromName do_class_get_method_from_name;
-mono::fMonoFieldGetValue          do_field_get_value;
-mono::fMonoRuntimeInvoke          do_runtime_invoke;
+mono::fMonoDomainGet              DoDomainGet;
+mono::fMonoDomainAssemblyOpen     DoDomainAssemblyOpen;
+mono::fMonoAssemblyGetImage       DoAssemblyGetImage;
+mono::fMonoClassFromName          DoClassFromName;
+mono::fMonoClassGetMethodFromName DoClassGetMethodFromName;
+mono::fMonoFieldGetValue          DoFieldGetValue;
+mono::fMonoRuntimeInvoke          DoRuntimeInvoke;
 
 // Definitions taken from Mono git
 
@@ -89,7 +89,7 @@ struct _MonoAssembly {
 void my_mono_get_domain()
 {
     mono::LoadAssemblyInternal();
-    do_domain_get();
+    DoDomainGet();
 }
 
 void my_mono_field_get_value(void* obj, void* classField, void* value)
@@ -97,7 +97,7 @@ void my_mono_field_get_value(void* obj, void* classField, void* value)
     g_MonoFieldGetValueHook.Remove();
 
     // Call original
-    do_field_get_value(obj, classField, value);
+    DoFieldGetValue(obj, classField, value);
 
     // Oh sorry Mono, looks like our assembly isn't real D:
     *(MonoPtr*)value = 0;
@@ -106,13 +106,13 @@ void my_mono_field_get_value(void* obj, void* classField, void* value)
 
 bool mono::Initialize(void *library)
 {
-    do_domain_get                 = (fMonoDomainGet)dlsym(library, "mono_domain_get");
-    do_domain_assembly_open       = (fMonoDomainAssemblyOpen)dlsym(library, "mono_domain_assembly_open");
-    do_assembly_get_image         = (fMonoAssemblyGetImage)dlsym(library, "mono_assembly_get_image");
-    do_class_from_name            = (fMonoClassFromName)dlsym(library, "mono_class_from_name");
-    do_class_get_method_from_name = (fMonoClassGetMethodFromName)dlsym(library, "mono_class_get_method_from_name");
-    do_field_get_value            = (fMonoFieldGetValue)dlsym(library, "mono_field_get_value");
-    do_runtime_invoke             = (fMonoRuntimeInvoke)dlsym(library, "mono_runtime_invoke");
+    DoDomainGet              = (fMonoDomainGet)dlsym(library, "mono_domain_get");
+    DoDomainAssemblyOpen     = (fMonoDomainAssemblyOpen)dlsym(library, "mono_domain_assembly_open");
+    DoAssemblyGetImage       = (fMonoAssemblyGetImage)dlsym(library, "mono_assembly_get_image");
+    DoClassFromName          = (fMonoClassFromName)dlsym(library, "mono_class_from_name");
+    DoClassGetMethodFromName = (fMonoClassGetMethodFromName)dlsym(library, "mono_class_get_method_from_name");
+    DoFieldGetValue          = (fMonoFieldGetValue)dlsym(library, "mono_field_get_value");
+    DoRuntimeInvoke          = (fMonoRuntimeInvoke)dlsym(library, "mono_runtime_invoke");
 
     return true;
 };
@@ -132,22 +132,22 @@ void mono::LoadAssemblyInternal()
     if(!assemblyToLoad || !assemblyNamespace)
         return;
 
-    domain = do_domain_get();
-    assembly = (_MonoAssembly*)do_domain_assembly_open(domain, assemblyToLoad);
+    domain = DoDomainGet();
+    assembly = (_MonoAssembly*)DoDomainAssemblyOpen(domain, assemblyToLoad);
 
     // GetAssemblies hide method
     assembly->corlib_internal = 1;
 
-    image = do_assembly_get_image(assembly);
-    klass = do_class_from_name(image, assemblyNamespace, LOADER_CLASS);
-    method = do_class_get_method_from_name(klass, LOADER_METHOD, 0);
-    do_runtime_invoke(method, NULL, NULL, NULL);
+    image = DoAssemblyGetImage(assembly);
+    klass = DoClassFromName(image, assemblyNamespace, LOADER_CLASS);
+    method = DoClassGetMethodFromName(klass, LOADER_METHOD, 0);
+    DoRuntimeInvoke(method, NULL, NULL, NULL);
 }
 
 void mono::HookAndLoadAssembly()
 {
     // Both hooks are single use and will be removed automatically
 
-    g_MonoFieldGetValueHook.Install((void*)do_field_get_value, (void*)my_mono_field_get_value, subhook::HookOption64BitOffset);
-    g_MonoGetDomainHook.Install((void*)do_domain_get, (void*)my_mono_get_domain, subhook::HookOption64BitOffset);
+    g_MonoFieldGetValueHook.Install((void*)DoFieldGetValue, (void*)my_mono_field_get_value, subhook::HookOption64BitOffset);
+    g_MonoGetDomainHook.Install((void*)DoDomainGet, (void*)my_mono_get_domain, subhook::HookOption64BitOffset);
 }
