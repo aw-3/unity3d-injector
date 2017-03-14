@@ -9,6 +9,7 @@
 #include <cstring>
 #include <string>
 #include <vector>
+#include <fstream>
 
 void* utility::GetModuleHandle(const char *moduleName)
 {
@@ -30,4 +31,18 @@ void* utility::GetModuleHandle(const char *moduleName)
     }
 
     return NULL;
+}
+
+std::vector<char> utility::FileReadAllBytes(std::string filePath)
+{
+    std::ifstream input(filePath, std::ios::binary);
+
+    if (input.is_open()) {
+        std::vector<char> buffer(
+                (std::istreambuf_iterator<char>(input)),
+                (std::istreambuf_iterator<char>())
+        );
+        return buffer;
+    }
+    return std::vector<char>();
 }

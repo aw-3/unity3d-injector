@@ -6,6 +6,7 @@
 
 #include "main.h"
 #include "subhook.h"
+#include "utility.h"
 
 #include <stdlib.h>
 #include <dlfcn.h>
@@ -20,6 +21,8 @@ char *mono::assemblyNamespace = NULL;
 
 mono::fMonoDomainGet              DoDomainGet;
 mono::fMonoDomainAssemblyOpen     DoDomainAssemblyOpen;
+mono::fMonoImageOpenFromData      DoImageOpenFromData;
+mono::fMonoAssemblyLoadFromFull   DoAssemblyLoadFromFull;
 mono::fMonoAssemblyGetImage       DoAssemblyGetImage;
 mono::fMonoClassFromName          DoClassFromName;
 mono::fMonoClassGetMethodFromName DoClassGetMethodFromName;
@@ -108,6 +111,8 @@ bool mono::Initialize(void *library)
 {
     DoDomainGet              = (fMonoDomainGet)dlsym(library, "mono_domain_get");
     DoDomainAssemblyOpen     = (fMonoDomainAssemblyOpen)dlsym(library, "mono_domain_assembly_open");
+    DoImageOpenFromData      = (fMonoImageOpenFromData)dlsym(library, "mono_image_open_from_data");
+    DoAssemblyLoadFromFull   = (fMonoAssemblyLoadFromFull)dlsym(library, "mono_assembly_load_from_full");
     DoAssemblyGetImage       = (fMonoAssemblyGetImage)dlsym(library, "mono_assembly_get_image");
     DoClassFromName          = (fMonoClassFromName)dlsym(library, "mono_class_from_name");
     DoClassGetMethodFromName = (fMonoClassGetMethodFromName)dlsym(library, "mono_class_get_method_from_name");
@@ -120,6 +125,7 @@ bool mono::Initialize(void *library)
 void mono::LoadAssemblyInternal()
 {
     void *domain;
+    void *raw_image;
     _MonoAssembly *assembly;
     void *image;
     void *klass;
@@ -133,7 +139,14 @@ void mono::LoadAssemblyInternal()
         return;
 
     domain = DoDomainGet();
-    assembly = (_MonoAssembly*)DoDomainAssemblyOpen(domain, assemblyToLoad);
+
+    // Old method (non reloadable because cached)
+    //assembly = (_MonoAssembly*)DoDomainAssemblyOpen(domain, assemblyToLoad);
+
+    // New method
+    std::vector<char> data = utility::FileReadAllBytes(assemblyToLoad);
+    raw_image = DoImageOpenFromData(&data[0], data.size(), 1, 0 /*&status*/, 0);
+    assembly = (_MonoAssembly*)DoAssemblyLoadFromFull(raw_image, 0, 0/*&status*/, 0);
 
     // GetAssemblies hide method
     assembly->corlib_internal = 1;

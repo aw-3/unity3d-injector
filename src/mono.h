@@ -9,6 +9,8 @@ class mono {
 public:
     typedef void* (*fMonoDomainGet)();
     typedef void* (*fMonoDomainAssemblyOpen)(void* domain, const char* file);
+    typedef void* (*fMonoImageOpenFromData)(char* data, unsigned long data_len, int need_copy, void* status, int refonly);
+    typedef void* (*fMonoAssemblyLoadFromFull)(void* image, void* fname, void* status, bool refonly);
     typedef void* (*fMonoAssemblyGetImage)(void* assembly);
     typedef void* (*fMonoClassFromName)(void* image, const char* ns, const char* name);
     typedef void* (*fMonoClassGetMethodFromName)(void* klass, const char* name, int param_count);
